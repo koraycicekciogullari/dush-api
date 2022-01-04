@@ -24,7 +24,6 @@ class LoginController extends Controller
         {
             throw new AuthenticationException();
         }
-        dd('dur');
         return response()->json(User::find($request->user()->id));
     }
 }
