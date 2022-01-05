@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\SignupController;
 use Illuminate\Http\Request;
@@ -22,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('login', LoginController::class);
 Route::apiResource('sign-up', SignupController::class)->only('store');
+
+Route::apiResource('roles', RoleController::class)->except('create', 'edit');
