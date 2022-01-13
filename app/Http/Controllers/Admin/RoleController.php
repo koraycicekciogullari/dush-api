@@ -57,11 +57,4 @@ class RoleController extends Controller
     {
         $role->delete();
     }
-
-    public function test(){
-        return [
-
-        ];
-    }
-
 }
